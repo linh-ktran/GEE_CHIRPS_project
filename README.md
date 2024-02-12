@@ -117,4 +117,4 @@ meanMonthlyRainyDays_clipped = mean_monthly_rainy_days.map(clip_image_collection
 - Export the raster image to Drive in format Tif File
 - Visualizing Tif File Using Matplotlib and GDAL
 
-![Rasters](/home/linh/GitHub/technical-test-it4r/rasters/Avg_rainy_days_January_to_June.png)
+![Rasters](rasters/Avg_rainy_days_January_to_June.png)
