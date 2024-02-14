@@ -32,6 +32,12 @@ pip install rasterio
 
 1. Create a ImageCollection with CHIRPS daily precipitation data.
 ```python
+# Define start and end years, dates (1981 - 2023)
+start_year = 1981
+end_year = 2023
+start_date = ee.Date.fromYMD(start_year, 1, 1)
+end_date = ee.Date.fromYMD(end_year, 12, 31)
+
 # Initialize the library.
 chirps = ee.ImageCollection('UCSB-CHG/CHIRPS/DAILY')
            .filterDate(start_date, end_date)
@@ -106,7 +112,7 @@ def clip_image_collection(image):
     return image.clip(aoi)
 
 # Map the clip_image_collection() function to the mean_monthly_rainy_days collection 
-meanMonthlyRainyDays_clipped = mean_monthly_rainy_days.map(clip_image_collection)
+mean_monthly_rainy_days_clipped = mean_monthly_rainy_days.map(clip_image_collection)
 ```
 
 ### III. Display the results
@@ -118,3 +124,4 @@ meanMonthlyRainyDays_clipped = mean_monthly_rainy_days.map(clip_image_collection
 - Visualizing Tif File Using Matplotlib and GDAL
 
 ![Rasters](rasters/Avg_rainy_days_January_to_June.png)
+![Rasters2](rasters/Avg_rainy_days_July_to_December.png)
