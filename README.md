@@ -1,5 +1,4 @@
 
-# Technical Test
 ### Create rasters of mean monthly rainy days from CHIRPS data with Google Earth Engine GEE
 
 [[Google Colab](
